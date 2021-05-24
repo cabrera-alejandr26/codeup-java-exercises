@@ -37,7 +37,54 @@ public class HelloWorld {
         System.out.println(myNumber);
 
         // #9 Change your code to declare myNumber as a float. Assign the value 3.14 to it. What happens? What are two ways we could fix this?
-        float myNumber2;
+        float newNumber = (float)3.14;
+        System.out.println(newNumber);
+
+
+        //#10 Copy and paste the following code blocks one at a time and execute them
+        int x = 5;
+        System.out.println(x++);
+        System.out.println(x);
+
+        int y = 5;
+        System.out.println(++y);
+        System.out.println(y);
+        // If the increment unary operator is added after the number, then the increment only happens after the "incremented" variable has been called again.
+        //If the increment unary operator is added before the number or variable, the increment happens that same time the variable is called.
+
+        //#11 Try to create a variable named class. What happens?
+//        long class = 9;
+        // An error message is received.
+
+        //#12 Object is the most generic type in Java. You can assign any value to a variable of type Object. What do you think will happen when the following code is run?
+
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
+//
+//        int three = (int) "three";
+//
+//        System.out.println(three);
+
+            //Both come out as errors...
+
+        //#13 Rewrite the following expressions using the relevant shorthand assignment operators:
+        int t = 4;
+        t += 5;
+
+        int u = 3;
+        int w = 4;
+        w *= u;
+
+        int z = 10;
+        int yr = 2;
+        z /=  yr;
+        yr -= z;
+
+        //#14 What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold? What happens if you increment a numeric variable past the type's capacity?
+        // Hint: Integer.MAX_VALUE is a class constant (we'll learn more about these later) that holds the maximum value for the int type.
+
+        //If a numerical value is smaller than what the type can hold then than there is an error, if the numerical value is much bigger than what a type can hold than it overflows.
 
 
 
@@ -51,5 +98,13 @@ public class HelloWorld {
 
 
 
-    }
+
+
+
+
+
+
+
+
+                }
 }
