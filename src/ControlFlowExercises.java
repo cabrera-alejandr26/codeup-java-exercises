@@ -71,14 +71,25 @@ public class ControlFlowExercises {
 
         }
 
-        System.out.println("What number would you like to go up to?");
-        String userInput = scanner.nextLine();
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        for(int t = 0; t <= Integer.parseInt(userInput); t++){
-            int squared = (t*t);
-            int cubed = (t *t *t);
-            System.out.println(t + "      | " + squared + "       |" + cubed);
+        for (; true; ) {
+            System.out.println("What number would you like to go up to?");
+            String userInput = scanner.nextLine();
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+            for (int t = 0; t <= Integer.parseInt(userInput); t++) {
+                int squared = (t * t);
+                int cubed = (t * t * t);
+                System.out.println(t + "      | " + squared + "       |" + cubed);
+            }
+            System.out.println("Would you like to continue?");
+            userInput = scanner.nextLine();
+            if(userInput == "y" || userInput =="yes"){
+                System.out.println("What number would you like to go up to?");
+                userInput = scanner.nextLine();
+            }else{
+                System.out.println("Thank you for using our program!");
+                break;
+            }
         }
 
         //4. Convert given number grades into letter grades.
