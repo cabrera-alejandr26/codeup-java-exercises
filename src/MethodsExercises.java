@@ -119,16 +119,52 @@ public class MethodsExercises {
         return DiceSide;
     }
 
+    //#6
+    public static int gameDev101 (){
+        int min = 1;
+        int max = 100;
+        int range = max - min + 1;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Lets play a game!");
+        System.out.println("First, let us pick a number between 1 and 100! \n The trick here is you are going to have to guess which number it is!");
+        int randNum = (int) (Math.random() * range) + min;
+        System.out.println(randNum);
+        System.out.println("Start guessing! When you're done, type in the number that you think we picked in the terminal!");
+
+        for(int i = 0; true;){
+//            int count = 0;
+            int userInput = scanner.nextInt();
+            if(userInput < randNum){
+                System.out.println("HIGHER!");
+                System.out.println("Number of tries:" + ++i);
+
+            }
+            else if(userInput > randNum){
+                System.out.println("LOWER!");
+                System.out.println("Number of tries:" + ++i);
+            }
+            else if(userInput == randNum){
+                System.out.println("CORRECT! YOU GUESSED THE NUMBER RIGHT!\nThanks for playing!");
+                System.out.println("Number of tries:" + ++i);
+                break;
+            }
+
+        }
+        return min;
+
+    }
+
 
     public static void main(String[] args) {
-        int invokeAdd = addition(9,6);
-        int invokeSub = subtraction(9,6);
-        int invokeMul = multiply(10,8);
-        int invokeDiv = divide(3,3);
-        int invokeMod = mod(9,6);
-        System.out.println("Addition Method: " + invokeAdd + "\nSubtraction Method: " + invokeSub + "\nMultiplication Method: " + invokeMul + "\nDivision Method: " + invokeDiv + "\nModulus Method: " + invokeMod);
-        getInteger(1,15);
-        factorialNum(1, 10);
-        rollDice();
+//        int invokeAdd = addition(9,6);
+//        int invokeSub = subtraction(9,6);
+//        int invokeMul = multiply(10,8);
+//        int invokeDiv = divide(3,3);
+//        int invokeMod = mod(9,6);
+//        System.out.println("Addition Method: " + invokeAdd + "\nSubtraction Method: " + invokeSub + "\nMultiplication Method: " + invokeMul + "\nDivision Method: " + invokeDiv + "\nModulus Method: " + invokeMod);
+//        getInteger(1,15);
+//        factorialNum(1, 10);
+//        rollDice();
+        gameDev101();
     }
 }
