@@ -31,18 +31,23 @@ public class MethodsExercises {
     //#2
     public static int getInteger(int min, int max){
         Scanner scanner = new Scanner(System.in);
+        int num = 9;
         System.out.println("Enter a number between " + min + " and " +  max + ": ");
-        int userNum = scanner.nextInt();
-//        int userInput = getInteger(1, 10);
-        if(userNum < min || userNum > max){
-            System.out.println("Please enter a number between " + min +  " and " +  max + "\n\n");
-            return userNum;
-        }else{
-            System.out.println("Thank you for your number!\n\n");
-             return userNum;
+
+        for(; true;){
+            int userNum = scanner.nextInt();
+//            int userInput = getInteger(1, 10);
+            if(userNum < min || userNum > max){
+                System.out.println("Please enter a number between " + min +  " and " +  max + "\n\n");
+
+            }else{
+                System.out.println("Thank you for your number!\n\n");
+                break;
+            }
         }
+//
 
-
+        return num;
 
     }
 
@@ -162,8 +167,8 @@ public class MethodsExercises {
 //        int invokeDiv = divide(3,3);
 //        int invokeMod = mod(9,6);
 //        System.out.println("Addition Method: " + invokeAdd + "\nSubtraction Method: " + invokeSub + "\nMultiplication Method: " + invokeMul + "\nDivision Method: " + invokeDiv + "\nModulus Method: " + invokeMod);
-//        getInteger(1,15);
-//        factorialNum(1, 10);
+        getInteger(1,10);
+        factorialNum(1, 10);
 //        rollDice();
         gameDev101();
     }
