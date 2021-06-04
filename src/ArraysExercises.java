@@ -2,11 +2,21 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysExercises {
+
+        public static Person[] addPerson(Person[] array, Person newPerson){
+            Person[] people = Arrays.copyOf(array, array.length + 1);
+            people[array.length] = newPerson;//people at the [proplr.lrngth - 1]
+            return people;
+
+        }
+
+   
+
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(numbers));
 
-        String[] Persons = new String[3];
+        String[] Person = new String[3];
 
 
         Person Name1 = new Person();
@@ -19,23 +29,23 @@ public class ArraysExercises {
         if(i == 0){
             Name1.setName(userResp);
             String n1 = Name1.getName();
-            Persons[0] = n1;
+            Person[0] = n1;
 
         }
         else if(i == 1){
             Name2.setName(userResp);
             String n2 = Name2.getName();
-            Persons[1] = n2;
+            Person[1] = n2;
         }
         else if(i == 2){
             Name3.setName(userResp);
             String n3 = Name3.getName();
-            Persons[2] = n3;
+            Person[2] = n3;
 
         }
     }
 
-    for(String names : Persons){
+    for(String names : Person){
         System.out.println("-------");
         System.out.println(names);
     }
