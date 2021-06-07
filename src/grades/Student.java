@@ -4,27 +4,27 @@ import java.util.ArrayList;
 
 public class Student {
 //Private Properties
-private static String studentName;
-private static ArrayList<Integer> grades = new ArrayList<>();
+private  String studentName;
+private  ArrayList<Integer> grades = new ArrayList<>();
 
 
-    Student(String name){
+   Student(String name){
         this.studentName = name;
-        boolean isEmpty = grades.isEmpty();
-        System.out.println("Your array empty status: " + isEmpty);
+//        boolean isEmpty = grades.isEmpty();
+//        System.out.println("Your array empty status: " + isEmpty);
     }
 
         // returns the student's name
-    public static String getName(){
+    public  String getName(){
         return studentName;
     }
     // adds the given grade to the grades property
-    public static void addGrade(int grade){
+    public void addGrade(int grade){
      grades.add(grade);
-        System.out.println("this is your new arrayList: " + grades);
+//        System.out.println("this is your new arrayList: " + grades);
     }
     // returns the average of the students grades
-    public static double getGradeAverage(){
+    public double getGradeAverage(){
         double sum = 0;
         for( int num : grades) {
             sum = sum + num;
@@ -33,11 +33,12 @@ private static ArrayList<Integer> grades = new ArrayList<>();
     }
 
 public static void main(String[] args) {
-    addGrade(56);
-    addGrade(67);
-    addGrade(78);
     Student test = new Student("john");
-    System.out.println(getName());
-    System.out.println(getGradeAverage());
+    test.addGrade(56);
+    test.addGrade(67);
+    test.addGrade(78);
+
+    System.out.println(test.getName());
+    System.out.println(test.getGradeAverage());
 }
 }
