@@ -58,16 +58,16 @@ public class GradesApplication {
                 String userInput = scanner.next();
                 switch (userInput){
                     case "jimmy-boi09":
-                        System.out.printf(finalGrades.get("jimmy-boi09").getName() + "'s average grade is: %.2f\n",finalGrades.get("jimmy-boi09").getGradeAverage());
+                        System.out.printf("GitHub Username: jimmy-boi09\nName: " + finalGrades.get("jimmy-boi09").getName() + "\nAverage grade: %.2f\n",finalGrades.get("jimmy-boi09").getGradeAverage());
                         break;
                     case "Javi-Script3":
-                        System.out.printf(finalGrades.get("Javi-Script3").getName() + "'s average grade is: %.2f\n",finalGrades.get("Javi-Script3").getGradeAverage());
+                        System.out.printf("GitHub Username: Javi-Script3\nName: " + finalGrades.get("Javi-Script3").getName() + "\nAverage grade: %.2f\n",finalGrades.get("Javi-Script3").getGradeAverage());
                         break;
                     case "blue-jay78":
-                        System.out.printf(finalGrades.get("blue-jay78").getName() + "'s average grade is: %.2f\n",finalGrades.get("blue-jay78").getGradeAverage());
+                        System.out.printf("GitHub Username: blue-jay78\nName: " + finalGrades.get("blue-jay78").getName() + "\nAverage grade: %.2f\n",finalGrades.get("blue-jay78").getGradeAverage());
                         break;
                     case "David_Code_00":
-                        System.out.printf(finalGrades.get("David_Code_00").getName() + "'s average grade is: %.2f\n",finalGrades.get("David_Code_00").getGradeAverage());
+                        System.out.printf("GitHub Username: David_Code_00\nName: " + finalGrades.get("David_Code_00").getName() + "\nAverage grade: %.2f\n",finalGrades.get("David_Code_00").getGradeAverage());
                         break;
 
                     default:
