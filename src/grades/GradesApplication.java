@@ -1,11 +1,13 @@
 package grades;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> finalGrades = new HashMap<>();
+
 
         //Jimmy's Grades:
         Student Jimmy = new Student("Jimmy");

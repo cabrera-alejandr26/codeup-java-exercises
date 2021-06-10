@@ -4,10 +4,11 @@ import java.util.Scanner;
 public class Person {
     //Set a private String
     private String Name;
-//    //The constructor
-//    public Person(String n){
-//        this.Name = n;
-//    }
+
+    //The constructor
+    public Person(String n){
+        this.Name = n;
+    }
 
     public String getName(){
 //TODO: return the person's name
@@ -16,7 +17,6 @@ public class Person {
 
     public void setName(String name){
 //TODO: change the name property to the passed value
-
         Name = name;
     }
     public void sayHello(){
@@ -26,7 +26,8 @@ public class Person {
 
     public static void main(String[] args) {
         //Made a new object
-        Person newName = new Person();
+        Person newName = new Person("Alex");
+
         //Setting up scanner
         Scanner userInput = new Scanner(System.in);
         System.out.println("What is your name?");
